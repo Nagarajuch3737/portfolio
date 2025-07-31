@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "portfolio.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "port.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/web.css", "dest": "/web.css" },
+    { "src": "/port.js", "dest": "/port.js" },
+    { "src": "/.*", "dest": "/portfolio.html" }
+  ]
+}
